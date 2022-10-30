@@ -12,9 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: aws flask sample app
-        run: | 
+        run: |
+             sudo cat log.txt >> /var/log/flask.txt
              sudo fuser -k 5000/tcp
              export FLASK_APP=app
              export FLASK_ENV=development
+             touch log.txt
              flask run >> log.txt 2>&1 &
         
