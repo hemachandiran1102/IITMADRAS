@@ -13,5 +13,5 @@ jobs:
         run: |
              export FLASK_APP=app
              export FLASK_ENV=production
-             systemctl restart flask.service
-             systemctl restart nginx.service
+             sudo systemctl restart flask.service
+             sudo systemctl restart nginx.service
