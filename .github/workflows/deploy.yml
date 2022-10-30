@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: aws flask sample app
         run: |
-             sudo fuser -k 5000/tcp
              export FLASK_APP=app
              export FLASK_ENV=production
              pm2 restart "flask run"
