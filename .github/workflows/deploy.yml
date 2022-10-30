@@ -13,7 +13,8 @@ jobs:
       - name: clones repo
       - uses: actions/checkout@v3
       - name: aws flask sample app
-         run:| 
-              export FLASK_APP=app
-              export FLASK_ENV=development
-              flask run
+        run: | 
+             export FLASK_APP=app
+             export FLASK_ENV=development
+             flask run
+        
