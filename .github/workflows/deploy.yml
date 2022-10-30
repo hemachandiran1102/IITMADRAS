@@ -13,6 +13,4 @@ jobs:
         run: |
              export FLASK_APP=app
              export FLASK_ENV=production
-             sudo yum install nodejs npm --enablerepo=epel
-             npm i -g pm2
-             pm2 restart "flask run"
+             sudo pm2 restart "flask run"
